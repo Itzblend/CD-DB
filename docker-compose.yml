@@ -1,0 +1,22 @@
+version: '3.7'
+
+networks:
+  cd-db:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.20.0.0/16
+
+services:
+  db:
+    image: postgres:12
+    container_name: db
+    restart: always
+    networks:
+      - cd-db
+    environment:
+      POSTGRES_PASSWORD: password
+    ports:
+      - 5435:5432
+    volumes:
+      - ./volumes/postgres:/var/lib/postgresql/data

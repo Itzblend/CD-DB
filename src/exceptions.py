@@ -1,0 +1,2 @@
+class DatabaseAlreadyExistsInSchemaError(Exception):
+    pass
