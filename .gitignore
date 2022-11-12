@@ -6,3 +6,5 @@ volumes/**
 !volumes/**/.gitkeep
 .github
 venv
+.idea
+.xml
