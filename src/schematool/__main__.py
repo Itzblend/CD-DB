@@ -1,4 +1,4 @@
-from src.schema import Schema
+from src.schematool.schema import Schema
 import click
 from src.config import configuration
 

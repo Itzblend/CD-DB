@@ -1,0 +1,87 @@
+{
+    "mydb": {
+        "database": "mydb",
+        "id": 1,
+        "schemas": {
+            "public": {
+                "tables": {}
+            },
+            "schema1": {
+                "tables": {
+                    "table1": {
+                        "columns": {
+                            "column1": {
+                                "type": "integer"
+                            },
+                            "column2": {
+                                "length": 255,
+                                "type": "varchar"
+                            }
+                        }
+                    },
+                    "table2": {
+                        "columns": {
+                            "column1": {
+                                "type": "integer"
+                            },
+                            "column2": {
+                                "length": 255,
+                                "type": "varchar"
+                            }
+                        }
+                    }
+                }
+            },
+            "schema2": {
+                "tables": {
+                    "table1": {
+                        "columns": {
+                            "column1": {
+                                "type": "integer"
+                            },
+                            "column2": {
+                                "length": 255,
+                                "type": "varchar"
+                            }
+                        }
+                    },
+                    "table3": {
+                        "columns": {
+                            "column1": {
+                                "type": "integer"
+                            },
+                            "column2": {
+                                "length": 255,
+                                "type": "varchar"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "testingdb": {
+        "database": "testingdb",
+        "id": 2,
+        "schemas": {
+            "public": {
+                "tables": {}
+            },
+            "testingschema": {
+                "tables": {}
+            },
+            "testingschema2": {
+                "tables": {}
+            }
+        }
+    },
+    "testingdb2": {
+        "database": "testingdb2",
+        "id": 3,
+        "schemas": {
+            "public": {
+                "tables": {}
+            }
+        }
+    }
+}
