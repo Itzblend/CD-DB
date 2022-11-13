@@ -50,4 +50,4 @@ class DBTool():
                 'default': column_default
             }
 
-        print(json.dumps(schema_map, indent=4))
+        return schema_map

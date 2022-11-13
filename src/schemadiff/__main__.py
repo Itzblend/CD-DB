@@ -1,6 +1,6 @@
 import click
-from src.dbtool.db import DBTool
 from src.config import configuration
+from src.schemadiff.schemadiff import SchemaDiff
 
 @click.group()
 @click.option('--database_name', '-d', required=False, help='Database name')
@@ -13,17 +13,9 @@ def cli(ctx, database_name: str = 'postgres') -> None:
 
 @cli.command()
 @click.pass_context
-def test_connection(ctx) -> None:
-    db = DBTool(connection_string=ctx.obj['connection_string'], database=ctx.obj['dbconfig']['database'])
-    print(db.query('SELECT 1'))
-    db.close()
-
-@cli.command()
-@click.pass_context
-def read_database_schema(ctx) -> None:
-    db = DBTool(connection_string=ctx.obj['connection_string'], database=ctx.obj['dbconfig']['database'])
-    db.read_database_schema()
-    db.close()
+def schema_diff(ctx) -> None:
+    schema_diff = SchemaDiff(connection_string=ctx.obj['connection_string'], database=ctx.obj['dbconfig']['database'])
+    schema_diff.diff()
 
 if __name__ == '__main__':
     cli()

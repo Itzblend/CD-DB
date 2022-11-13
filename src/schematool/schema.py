@@ -82,8 +82,8 @@ class Schema:
     def drop_column(self, database: str, schema_name: str, table_name: str, column_name: str) -> None:
         del self.schema_config[database]['schemas'][schema_name]['tables'][table_name]['columns'][column_name]
         self._write_schema(self.schema_config)
-    
 
+    
 class Dtypes:
     types = {
         'int': 'INT',
